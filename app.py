@@ -17,5 +17,13 @@ def main():
 def dbs():
     return(render_template("dbs.html"))
 
+@app.route("/DbsPrediction", methods=["GET","POST"])
+def DbsPrediction():
+    r = request.form.get("q")
+    print (r)
+
+    
+    return(render_template("DbsPrediction.html"))
+
 if __name__ == "__main__":
     app.run()
